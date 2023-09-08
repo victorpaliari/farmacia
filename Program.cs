@@ -17,11 +17,21 @@ namespace Farmacia
                 decimal preco;
 
             ProdutoController produto = new();
+            Medicamento teste = new Medicamento(produto.GerarNumero(), "omeprazol", 1, 40.0M, "Genérico");
+            produto.CriarProduto(teste);
+
+            //A classe Medicamento possui Método Construtor com parâmetros e isso obriga a declara-los
+            //para instanciar objetos do tipo Classe Medicamento
+            //Medicamento med1 = new Medicamento();
+            //Não pode instanciar uma classe abstrata, no caso Produto é uma classe abstrata
+            // Produto produto1 = new Produto (22, "fulano", 1, 2.0M);
 
             while (true)
             {
+                /*
                 Console.ForegroundColor = ConsoleColor.DarkBlue;
                 Console.BackgroundColor = ConsoleColor.White;
+                */
                 Console.WriteLine("------------------------------------------");
                 Console.WriteLine("|          BEM-VINDO À FARMÁCIA          |");
                 Console.WriteLine("------------------------------------------");
@@ -35,7 +45,7 @@ namespace Farmacia
                 Console.WriteLine("------------------------------------------");
                 Console.WriteLine("Escolha uma opção para começar:           ");
                 Console.WriteLine("                                          ");
-                Console.ResetColor();
+
 
                 opcao = Convert.ToInt32(Console.ReadLine());
 
@@ -71,6 +81,7 @@ namespace Farmacia
                                 Console.WriteLine("Digite o genérico do produto: ");
                                 generico = Console.ReadLine();
                                 produto.CriarProduto(new Medicamento(produto.GerarNumero(), nome, tipo, preco, generico));
+                                
                                 break;
                             case 2:
                                 Console.WriteLine("Digite o fragrância do produto: ");
@@ -143,7 +154,9 @@ namespace Farmacia
                         KeyPress();
                                 break;
                             case 6:
+                                
                                 produto.MudarBackground();
+                                
                                 KeyPress();
                                 break;
                         }

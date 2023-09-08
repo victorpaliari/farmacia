@@ -13,7 +13,7 @@ namespace Farmacia.Model
         public int tipo = 0;
         public decimal preco = 0.0M;
 
-        protected Produto(int numero, string nome, int tipo, decimal preco)
+        public Produto(int numero, string nome, int tipo, decimal preco)
         {
             this.numero = numero;
             this.nome = nome;
@@ -66,7 +66,7 @@ namespace Farmacia.Model
                     break;
                 
             }
-
+           
             Console.WriteLine("******************************************************");
             Console.WriteLine("Dados do produto");
             Console.WriteLine("******************************************************");

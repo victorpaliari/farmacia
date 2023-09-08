@@ -72,7 +72,6 @@ namespace Farmacia.Controller
             }
         }
 
-
         public void MudarBackground()
         {
             Console.WriteLine("Mudar a cor do plano de fundo");
@@ -84,6 +83,10 @@ namespace Farmacia.Controller
             Console.ResetColor();
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("3 - Verde");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("4 - Azul");
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine("5 - Magenta");
             Console.ResetColor();
 
             int opcao = 0;
@@ -101,8 +104,15 @@ namespace Farmacia.Controller
                 case 3:
                     Console.ForegroundColor = ConsoleColor.Green;
                     break;
+                case 4:
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    break;
+                case 5:
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    break;
 
             }
+
 
         }
         //Métodos Auxiliares
